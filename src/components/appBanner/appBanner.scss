@@ -6,6 +6,7 @@
         background-color: $dark;
         height: 100px;
         padding: 0 25px 0 45px;
+        margin-bottom: 50px;
         display: grid;
         grid-template-columns: 152px auto 133px;
         &-text {
@@ -13,7 +14,7 @@
             font-size: 24px;
             line-height: 32px;
             color: #FFFFFF;
-            padding-left: 83px;
+            padding-left: 90px;
             padding-top: 18px;
         }
     }

@@ -16,7 +16,7 @@
     }
     &__item {
         width: 200px;
-        height: 318px;
+        height: 300px;
         background-color: $dark;
         box-shadow: 5px 5px 10px rgba(0, 0, 0, .25);
         padding: 15px;
@@ -28,6 +28,10 @@
             object-fit: cover;
             transform: translate(-15px, -15px);
         }
+        &:hover {
+            box-shadow: 0 5px 20px #9f0013;
+            transform: scale(1.05);
+        }
         &_selected {
             box-shadow: 0 5px 20px $main-color;
             transform: translateY(-8px);
@@ -36,7 +40,7 @@
     &__name {
         font-weight: bold;
         font-size: 22px;
-        line-height: 29px;
+        line-height: 25px;
         text-transform: uppercase;
         color: #fff;
     }
