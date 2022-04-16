@@ -12,22 +12,18 @@ const setContent = (process, Component, newItemLoading) => {
     switch (process) {
         case 'waiting':
             return <Spinner />;
-            break;
         case 'loading':
             return newItemLoading ? <Component /> : <Spinner />;
-            break;
         case 'confirmed':
             return <Component />;
-            break;
         case 'error':
             return <ErrorMessage />;
-            break;
         default:
             throw new Error('Unexpected process state');
     }
 }
 
-const CharList = (props) => {
+const CharList = ({ onCharSelected }) => {
 
     const [charList, setCharList] = useState([]);
     const [newItemLoading, setNewItemLoading] = useState(false);
@@ -82,12 +78,12 @@ const CharList = (props) => {
                     ref={el => itemRefs.current[i] = el}
                     key={item.id}
                     onClick={() => {
-                        props.onCharSelected(item.id);
+                        onCharSelected(item.id);
                         focusOnItem(i);
                     }}
                     onKeyPress={(e) => {
                         if (e.key === ' ' || e.key === "Enter") {
-                            props.onCharSelected(item.id);
+                            onCharSelected(item.id);
                             focusOnItem(i);
                         }
                     }}>

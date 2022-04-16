@@ -28,9 +28,7 @@ const SinglePage = ({ Component, dataType }) => {
         }
     }
 
-    const onDataLoaded = (data) => {
-        setData(data);
-    }
+    const onDataLoaded = (data) => setData(data);
 
     return (
         <>

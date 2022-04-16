@@ -28,9 +28,7 @@ const CharInfo = (props) => {
             .then(() => setProcess('confirmed'))
     }
 
-    const onCharLoaded = (char) => {
-        setChar(char);
-    }
+    const onCharLoaded = (char) => setChar(char);
 
     return (
         <div className="char__info">
@@ -41,9 +39,9 @@ const CharInfo = (props) => {
 
 const View = ({ data }) => {
     const { name, description, thumbnail, homepage, wiki, comics } = data;
-    comics.length = 10;
+    const newComics = comics.slice(0, 10);
 
-    const searcUrl = comics.map(item => {
+    const searcUrl = newComics.map(item => {
         return item.resourceURI.match(/\d/g).join('').slice(1);
     });
 
@@ -74,9 +72,9 @@ const View = ({ data }) => {
             </div>
             <div className="char__comics">Comics:</div>
             <ul className="char__comics-list">
-                {comics.length > 0 ? null : 'There is no comics this character'}
+                {newComics.length > 0 ? null : 'There is no comics this character'}
                 {
-                    comics.map((item, i) => {
+                    newComics.map((item, i) => {
                         // eslint-disable-next-line
                         if (i > 9) return;
                         return (
