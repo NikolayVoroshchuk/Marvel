@@ -1,13 +1,13 @@
 import { useState } from 'react'
 import { Helmet } from 'react-helmet'
 
-import RandomChar from "../randomChar/RandomChar";
-import CharList from "../charList/CharList";
-import CharInfo from "../charInfo/CharInfo";
-import SearchChar from "../searchChar/SearchChar";
-import ErrorBoundary from "../errorBoundary/ErrorBoundary";
+import RandomChar from "../components/randomChar/RandomChar";
+import CharList from "../components/charList/CharList";
+import CharInfo from "../components/charInfo/CharInfo";
+import SearchChar from "../components/searchChar/SearchChar";
+import ErrorBoundary from "../components/errorBoundary/ErrorBoundary";
 
-import decoration from '../../resources/img/vision.png';
+import decoration from '../resources/img/vision.png';
 
 const MainPage = () => {
     const [selectedChar, setChar] = useState(null);
