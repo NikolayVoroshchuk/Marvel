@@ -6,7 +6,6 @@ import './randomChar.scss';
 import mjolnir from '../../resources/img/mjolnir.png'
 
 const RandomChar = () => {
-
     const [char, setChar] = useState({});
     const { getCharacter, clearError, process, setProcess } = useMarvelService();
 
@@ -15,9 +14,7 @@ const RandomChar = () => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
-    const onCharLoaded = (char) => {
-        setChar(char);
-    }
+    const onCharLoaded = (char) => setChar(char);
 
     const updateChar = () => {
         clearError();

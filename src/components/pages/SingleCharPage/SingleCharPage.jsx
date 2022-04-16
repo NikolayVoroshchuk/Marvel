@@ -2,7 +2,6 @@ import { Helmet } from 'react-helmet';
 import './SingleCharPage.scss';
 
 const SingleCharPage = ({ data }) => {
-
     const { name, description, thumbnail } = data;
 
     return (
